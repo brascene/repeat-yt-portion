@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Repeat</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Repeat</h1>
+
+    <div class="section">
+      <label for="start-time">Start Time:</label>
+      <div class="time-input-group">
+        <input type="text" id="start-time" placeholder="0:00 or 0">
+        <button id="use-current-start" class="small-btn">Use Current</button>
+      </div>
+      <small>Format: MM:SS, HH:MM:SS, or seconds (e.g., 1:30 or 90)</small>
+    </div>
+
+    <div class="section">
+      <label for="end-time">End Time:</label>
+      <div class="time-input-group">
+        <input type="text" id="end-time" placeholder="0:10 or 10">
+      </div>
+      <small>Format: MM:SS, HH:MM:SS, or seconds (e.g., 2:00 or 120). Scrub the video to find the end time.</small>
+    </div>
+
+    <div class="section">
+      <label for="repeat-count">Repeat Count:</label>
+      <input type="number" id="repeat-count" min="0" placeholder="Infinite (0)">
+      <small>Set to 0 for infinite loop</small>
+    </div>
+
+    <div class="section">
+      <div class="info">
+        <strong>Current Time:</strong> <span id="current-time">--</span>
+      </div>
+      <div class="info">
+        <strong>Duration:</strong> <span id="duration">--</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="status" id="status">Ready to start</div>
+    </div>
+
+    <div class="button-group">
+      <button id="start-btn" class="primary-btn">Start Repeat</button>
+      <button id="stop-btn" class="secondary-btn">Stop</button>
+    </div>
+
+    <div class="section tips">
+      <h3>Tips:</h3>
+      <ul>
+        <li>Play the video and use "Use Current" buttons to set timestamps</li>
+        <li>Set repeat count to 0 for infinite loop</li>
+        <li>The extension works only on YouTube video pages</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

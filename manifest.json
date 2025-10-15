@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Repeat",
+  "version": "1.0.2",
+  "description": "Replay specific portions of YouTube videos for a specified number of times. Click the extension icon on YouTube!",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "YouTube Repeat - Click to toggle panel"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
