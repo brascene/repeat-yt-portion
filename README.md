@@ -17,32 +17,25 @@ A Chrome/Arc browser extension that allows you to replay specific portions of Yo
 
 ## Installation
 
-### Method 1: Load Unpacked (Developer Mode)
+### Method 1: Load Unpacked (Recommended for now)
 
 1. **Download the extension**
    - Click the green "Code" button at the top of this page
    - Select "Download ZIP"
    - Extract the ZIP file to a location on your computer
 
-2. **Install the icons** (required)
-   ```bash
-   cd repeat-yt-portion
-   pip install Pillow
-   python3 create_icons.py
-   ```
-
-   Alternatively, you can create the icons manually (see `icons/README.md`)
-
-3. **Load in Chrome/Arc**
+2. **Load in Chrome/Arc**
    - Open your browser and go to `chrome://extensions/`
    - Enable "Developer mode" (toggle in the top-right corner)
    - Click "Load unpacked"
-   - Select the `repeat-yt-portion` folder
+   - Select the extracted `repeat-yt-portion` folder
 
-4. **You're ready!**
+3. **You're ready!**
    - Navigate to any YouTube video
    - Look for the red floating button on the bottom-right
    - Click it to open the control panel
+
+**Note:** All icons are already included - no additional setup needed!
 
 ### Method 2: Chrome Web Store (Coming Soon)
 
@@ -140,13 +133,13 @@ repeat-yt-portion/
 ├── popup.html          # Legacy popup (optional)
 ├── popup.js            # Legacy popup script (optional)
 ├── popup.css           # Legacy popup styles (optional)
-├── create_icons.py     # Icon generation script
 ├── icons/
-│   ├── icon16.png      # 16x16 icon
-│   ├── icon48.png      # 48x48 icon
-│   ├── icon128.png     # 128x128 icon
+│   ├── icon16.png      # 16x16 icon (included)
+│   ├── icon48.png      # 48x48 icon (included)
+│   ├── icon128.png     # 128x128 icon (included)
 │   ├── icon.svg        # SVG template
-│   └── README.md       # Icon creation guide
+│   └── README.md       # Icon customization guide
+├── LICENSE             # MIT License
 └── README.md           # This file
 ```
 
@@ -171,10 +164,9 @@ The extension requires minimal permissions:
 
 ### Extension not appearing on YouTube
 
-1. Make sure you've created the icon files (see Installation step 2)
-2. Reload the extension in `chrome://extensions/`
-3. Refresh the YouTube page (F5 or Cmd+R)
-4. Check browser console (F12) for error messages
+1. Reload the extension in `chrome://extensions/`
+2. Refresh the YouTube page (F5 or Cmd+R)
+3. Check browser console (F12) for error messages
 
 ### Red button not visible
 
@@ -209,15 +201,13 @@ Contributions are welcome! Here are ways you can help:
 git clone https://github.com/brascene/repeat-yt-portion.git
 cd repeat-yt-portion
 
-# Create the icons
-pip install Pillow
-python3 create_icons.py
-
 # Load in Chrome
 # 1. Go to chrome://extensions/
 # 2. Enable Developer mode
 # 3. Click "Load unpacked"
 # 4. Select this directory
+
+# Icons are already included - ready to go!
 ```
 
 ## Roadmap

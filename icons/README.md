@@ -1,36 +1,24 @@
 # Extension Icons
 
-This folder needs icon files for the extension to work properly in Chrome/Arc browser.
+This folder contains the icon files required for the extension to work in Chrome/Arc browser.
 
-## Required Files:
-- `icon16.png` - 16x16 pixels
-- `icon48.png` - 48x48 pixels
-- `icon128.png` - 128x128 pixels
+## Included Files:
+- `icon16.png` - 16x16 pixels (toolbar icon)
+- `icon48.png` - 48x48 pixels (extension management page)
+- `icon128.png` - 128x128 pixels (Chrome Web Store, if published)
+- `icon.svg` - Vector source file for custom modifications
 
-## How to Create Icons:
+## Already Ready to Use!
 
-### Option 1: Use the Python script (recommended)
-```bash
-pip install Pillow
-python3 ../create_icons.py
-```
+The PNG icons are already included and ready to use. You don't need to do anything - just load the extension and it will work.
 
-### Option 2: Use the SVG template
-Use `icon.svg` as a template and convert it to PNG files at the required sizes using:
-- Online tools like https://www.iloveimg.com/resize-image
-- Design software (Figma, Sketch, Photoshop, GIMP, etc.)
-- Command line tools (ImageMagick): `convert icon.svg -resize 16x16 icon16.png`
+## Customizing Icons (Optional)
 
-### Option 3: Create your own icons
-Create simple 16x16, 48x48, and 128x128 PNG images with:
-- A red (#FF0000) background
-- White repeat/loop arrows or symbols
-- Save them with the exact names above
+If you want to create your own custom icons:
 
-## Temporary Workaround:
-Until you create proper icons, you can create simple placeholder PNGs by:
-1. Opening any image editor
-2. Creating a red square at each size (16x16, 48x48, 128x128)
-3. Saving them with the correct filenames
-
-The extension will work without icons, but Chrome may show warnings during installation.
+1. **Edit the SVG template**: Modify `icon.svg` with any vector graphics editor
+2. **Convert to PNG**: Use one of these methods:
+   - Online tools like https://www.iloveimg.com/resize-image
+   - Design software (Figma, Sketch, Photoshop, GIMP)
+   - Command line tools (ImageMagick): `convert icon.svg -resize 16x16 icon16.png`
+3. **Replace the files**: Save your new PNGs with the same filenames
